@@ -12,6 +12,7 @@
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-LightItalic.eot');
@@ -104,8 +105,9 @@
 
 
 */
-*
-
+* {
+    box
+}
 
 
 html,
