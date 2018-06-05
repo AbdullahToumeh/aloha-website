@@ -1,105 +1,155 @@
-/*.clearfix:before,
-.clearfix:after {
-	content:"";
-	display: table;
-	clear: both;
-}*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/*fonts*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* reset end here */
+
+
 @font-face {
-    font-family: 'Playfair Display Web';
-    src: url('../fonts/playfairdisplay-bold-webfont.eot');
-    src: url('../fonts/playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg'),
-         url('../fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-bold-webfont.ttf') format('truetype');
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-LightItalic.eot');
+    src: url('../fonts/Raleway-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-LightItalic.woff2') format('woff2'),
+        url('../fonts/Raleway-LightItalic.woff') format('woff'),
+        url('../fonts/Raleway-LightItalic.ttf') format('truetype'),
+        url('../fonts/Raleway-LightItalic.svg#Raleway-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-MediumItalic.eot');
+    src: url('../fonts/Raleway-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Raleway-MediumItalic.woff') format('woff'),
+        url('../fonts/Raleway-MediumItalic.ttf') format('truetype'),
+        url('../fonts/Raleway-MediumItalic.svg#Raleway-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.eot');
+    src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Light.woff2') format('woff2'),
+        url('../fonts/Raleway-Light.woff') format('woff'),
+        url('../fonts/Raleway-Light.ttf') format('truetype'),
+        url('../fonts/Raleway-Light.svg#Raleway-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Medium.eot');
+    src: url('../fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../fonts/Raleway-Medium.woff') format('woff'),
+        url('../fonts/Raleway-Medium.ttf') format('truetype'),
+        url('../fonts/Raleway-Medium.svg#Raleway-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.eot');
+    src: url('../fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Bold.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Playfair Display Web';
-    src: url('../fonts/playfairdisplay-bolditalic-webfont.eot');
-    src: url('../fonts/playfairdisplay-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/playfairdisplay-bolditalic-webfont.svg#playfair_displaybold_italic') format('svg'),
-         url('../fonts/playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-bolditalic-webfont.ttf') format('truetype');
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-BoldItalic.eot');
+    src: url('../fonts/PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-BoldItalic.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-BoldItalic.svg#PlayfairDisplay-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Playfair Display Web';
-    src: url('../fonts/playfairdisplay-italic-webfont.eot');
-    src: url('../fonts/playfairdisplay-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg'),
-         url('../fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-italic-webfont.ttf') format('truetype');
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Italic.eot');
+    src: url('../fonts/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Italic.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Playfair Display Web';
-    src: url('../fonts/playfairdisplay-regular-webfont.eot');
-    src: url('../fonts/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg'),
-         url('../fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
-         url('../fonts/playfairdisplay-regular-webfont.ttf') format('truetype');
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.eot');
+    src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway Display Web';
-    src: url('../fonts/raleway-light-webfont.eot');
-    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-light-webfont.svg#ralewaylight') format('svg'),
-         url('../fonts/raleway-light-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway Display Web';
-    src: url('../fonts/raleway-medium-webfont.eot');
-    src: url('../fonts/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-medium-webfont.svg#ralewaymedium') format('svg'),
-         url('../fonts/raleway-medium-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-medium-webfont.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway Display Web';
-    src: url('../fonts/raleway-lightitalic-webfont.eot');
-    src: url('../fonts/raleway-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-lightitalic-webfont.svg#ralewaylight_italic') format('svg'),
-         url('../fonts/raleway-lightitalic-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-lightitalic-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Raleway Display Web';
-    src: url('../fonts/raleway-mediumitalic-webfont.eot');
-    src: url('../fonts/raleway-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/raleway-mediumitalic-webfont.svg#ralewaymedium_italic') format('svg'),
-         url('../fonts/raleway-mediumitalic-webfont.woff2') format('woff2'),
-         url('../fonts/raleway-mediumitalic-webfont.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
 }
 
 /* start of mobile version*/
+
 *{
 	box-sizing: border-box;
 }
-
-
 
 html{
 	font-size:14px;
@@ -107,19 +157,20 @@ html{
 
 body{
 	margin: 0 auto;
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
+	line-height: 2;
 }
 
 h2 {
-	font-family: 'Playfair Display Web', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: normal;
     font-style: italic;
 	font-size: 2.4rem;
 }
 h3 {
-	font-family: 'Playfair Display Web', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: normal;
     font-style: normal;
 }
@@ -139,7 +190,7 @@ h3 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 1rem 0.5rem 0 0.3rem;
+	padding: 1rem 1rem 0 1rem;
 	width: 100%;
 	border-bottom: 1px solid #D3D3D3;
 }
@@ -147,7 +198,6 @@ h3 {
 .logo { 
 	width: 8.8rem;
 	height: auto;
-	padding: 0 0.1rem 0 0.15rem;
 }
 
 .cart { 
@@ -165,8 +215,8 @@ h3 {
 
 .nav ul{
 	text-align: center;
-	padding: 1rem 0;
-
+	padding: 0.5rem 0;
+	
 }
 
 .nav li {
@@ -176,33 +226,29 @@ h3 {
 
 .nav a{
 	font-size: 1rem;
-	font-family: 'Raleway Display Web', sans-serif;
-	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
     font-style: normal;
 	color: #F05146;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-/*end of header section*/
 
-/*banner section*/
 .hero { 
-	margin-top: 8.05rem;
+	margin-top: 6.8rem;
 	text-align: center;
 	clear: both;
-	background: linear-gradient( rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23) ), 
-	url('../images/banner-girl.png') no-repeat center 4.6rem, 
-	url('../images/flower-bkgd.jpg') repeat-x center top;
-	background-size: cover, 10.71rem 26.3em, cover;	
-	height: 28.8rem;
+	background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), 
+	url('../images/banner-girl.png') no-repeat center 60px, 
+	url('../images/flower-bkgd.jpg') repeat-x top;
+	background-size: cover, 10.71rem 26.3rem, cover;	
+	height: 400px;
 	position: relative;
 }
 
 
 .hero_text { /*text in banner image*/
-	font-family: 'Raleway Display Web', sans-serif; 
-	font-weight: bold;
+	font-family: 'Raleway', sans-serif; 
     font-style: normal;
 	font-size: 1.26rem;
 	color: #ffffff;
@@ -213,11 +259,11 @@ h3 {
 }
 
 .hero_springsummer { /*text in banner image*/
-	font-family: 'Playfair Display Web', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: normal;
     font-style: normal;
 	font-size: 2.5rem;
-	margin: 1.42rem 3.42rem;
+	margin: 0 3.42rem;
 	text-shadow: 0.14rem 0.14rem 0.57rem rgba(0, 0, 0, 0.4);
 	color: white;
 	text-align: center;
@@ -231,8 +277,8 @@ h3 {
 }
 
 .content1_text {
-	font-family: 'Raleway Display Web', sans-serif; 
-	font-weight: normal;
+	font-family: 'Raleway', sans-serif; 
+	font-weight: 100;
     font-style: normal;
 	font-size: 1.14rem;
 	padding-top: 1.4rem;
@@ -255,7 +301,7 @@ h3 {
 .box_category{
 	text-transform: uppercase;
 	color: white;
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: bold;
     font-style: normal;
 	font-size: 1.7rem;
@@ -335,7 +381,7 @@ h3 {
 	padding: 0;
 }
 .product p {
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: bold;
     font-style: normal;
 	font-size: 0.78rem;
@@ -349,7 +395,7 @@ h3 {
 }
 
 .product .price{
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: bold;
     font-style: normal;
 	font-size: 1.07rem;
@@ -373,9 +419,9 @@ input{
 	border-style: none;
 	padding: 0.71rem 0 0.71rem 2.14rem;
 	border-radius: 3rem;
-	width: 26.8rem;
+	width: 100%;
 	height: 3rem;
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: normal;
     font-style: normal;
 	font-size: 1.07rem;
@@ -392,10 +438,11 @@ label{
 
 .signup{
 	margin: 4rem auto 0 auto;
-	text-shadow: 0.03rem 0.03rem 0.07rem #000000;
 	background: linear-gradient( rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18) ), 
 	url('../images/wave-bkgd.jpg') no-repeat bottom;
 	height: 23.8rem;
+	text-shadow: 2px 2px 4px rgb(99, 99, 99, .8);
+
 }
 
 .signup_text{
@@ -405,13 +452,14 @@ label{
 
 .signup_text2{
 	padding-top: 1.40rem;
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: normal;
     font-style: normal;
 	font-size: 1.14rem;
 	color: #ffffff;
 	line-height: 2;
 	margin: 0 1.95% 0 1.95%;
+	text-shadow: 2px 2px 4px rgb(99, 99, 99, .8);
 }
 
 button{
@@ -422,13 +470,13 @@ button{
 	border-radius: 3rem;
 	width: 7.85rem;
 	cursor: pointer;
-	font-family: 'Raleway Display Web', sans-serif; 
+	font-family: 'Raleway', sans-serif; 
 	font-weight: bold;
     font-style: normal;
 	font-size: 1.03rem;
-	position: relative;
-	left: 9.2rem;
-	bottom: 2.7rem;
+	position: absolute;
+	bottom: 0.35rem;
+	right: 0.3rem;
 	outline:none;
 }
 
@@ -447,13 +495,23 @@ button:active {
 	max-width: 100%;
 	background:#242424;
 	text-align: center;
-	padding: 2rem 0;
 	justify-content: center;
 }
 
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1240px;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
 .footer p {
 	color: white;
-	font-family: 'Playfair Display Web', serif;
+	font-family: 'Playfair Display', serif;
 	font-weight: normal;
     font-style: normal;
 	font-size: 1rem;
@@ -513,6 +571,10 @@ button:active {
 /* Breakpoints:tablet*/
 @media screen and (min-width: 600px) {
 
+.footer-container {
+	flex-direction: row;
+
+}	
 html {
 	font-size: 16px;
 }
@@ -524,12 +586,10 @@ h2 {
 
 
 /*header section*/
-.header{
-	padding-left: 0.6rem;
-	padding-right: 1rem;
-	height: 5.2rem;
-}
 
+.header{
+	border: none;
+}
 
 .logo { 
 	width: 7.8rem;
@@ -564,14 +624,12 @@ h2 {
 /*banner section*/
 
 .hero { 	
-	margin-top: 5.2rem;
-	clear: both;
-	background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), 
-	url('../images/banner-girl.png') no-repeat center 3.8rem, 
-	url('../images/flower-bkgd.jpg') repeat-x center top;
-	background-size: cover, 9.37rem 23rem, cover;
 	height: 25rem;
 	position: relative;
+	margin: 0;
+	background-size: cover, 130px auto, cover;
+	background-position: center, center 100px, top ;
+
 }
 
 .hero_text { /*text in banner image*/
@@ -637,10 +695,6 @@ h2 {
 	flex: 2 0 50%;
 }
 
-/*end of box section*/
-
-
-/*product list section*/
 
 
 .product_list h2{
@@ -672,9 +726,7 @@ h2 {
 
 	font-size: 1rem;
 }
-/*end of product list section*/
 
-/*sign up section*/
 .form{
 	max-width: 31rem;
 	width: 100%;
@@ -697,9 +749,6 @@ button{
 	bottom: 2.64rem;
 }
 
-/*end of sign up section*/
-
-/*footer section*/
 .footer {
 	display: flex;
 	flex-direction: row;
@@ -742,21 +791,40 @@ button{
 	color: white;
 }
 }
-/*end of footer section*/
-   
-
-/* end of Breakpoints:tablet*/
-
-/* Breakpoints:desktop*/
-
 
 @media screen and (min-width: 1240px) {
+	.logo {
+		width: 8.8rem;
+		max-width: 160px;
+	}
 
-html{
+	.cart {
+		width: 62px;
+	}
+
+	.hero {
+		background-size: cover, 14rem auto, contain;
+		height: 550px;
+		margin-top: 3rem;
+	}
+
+	.hero_text {
+		padding-top: 15rem;
+	}
+
+
+
+	
+
+
+
+
+
+
+/* html{
 	font-size: 16px;
 }
 
-/*header section*/
 
 .header{
 	padding: 1rem 3rem;
@@ -779,8 +847,7 @@ html{
 	font-size: 1rem;
 }
 
-/*end of header section
-/*banner section*/
+
 .hero { 
 	margin-top: 6rem;	
 	clear: both;
@@ -802,8 +869,7 @@ html{
 	letter-spacing: 0.04rem;
 	margin-top: 1.1rem;
 }
-/*end of banner section/
-/*content section*/
+
 .content1 {
 	padding: 4.2rem 18rem 4rem 18rem;
 	margin: 0 auto 0 auto;
@@ -815,9 +881,7 @@ html{
 	line-height: 2;
 }
 
-/*end of content section*/
 
-/*box section*/
 .box_area{
 	height: 650px;
 }
@@ -825,15 +889,11 @@ html{
 .box_category{
 	font-size: 2.3rem;
 }
-/*end of box section*/
 
-/*product list section*/
 .product_images {
 	width: 25%;
 }
-/*end of product list section*/
 
-/*signup section*/
 .signup{
 	background: linear-gradient( rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18) ), 
 	url('../images/wave-bkgd.jpg') no-repeat bottom;
@@ -861,7 +921,7 @@ form {
 }
 
 input {
-	width: 28rem;
+	width: 100%;
 	padding: 0.7rem 2rem;
 }
 
@@ -873,9 +933,6 @@ button{
 	padding-left: 1.5rem;
 }
 
-/*end of signup section*/
-
-/*footer section*/
 
 .footer{
 	display: flex;
@@ -906,8 +963,5 @@ button{
 
 .socialmedia2{
 	visibility: visible;
+} */
 }
-}
-
-
-/* end of Breakpoints:desktop*/
