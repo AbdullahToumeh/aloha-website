@@ -147,6 +147,13 @@ table {
 
 /* start of mobile version*/
 
+
+.product_images {
+	width: 100%;
+	text-align: center;
+}
+
+
 *{
 	box-sizing: border-box;
 }
@@ -204,6 +211,37 @@ h3 {
 .cart { 
 	width: 3.57rem;
 	height: auto;
+	position: relative;
+}
+
+.cartUpdate{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: red;
+	border-radius: 20px;
+	height: 1.3rem;
+	width: 1.3rem;
+	
+}
+
+.cartUpdate p {
+	position: relative;
+	bottom: 6px;
+	right: 5px;
+	color: white;
+}
+
+.addToCart  {
+	background-color: black;
+	color: white;
+	padding: 10px 10px;
+	position: relative;
+	margin-top: 1rem;
+}
+
+.addToCart:active {
+	background-color: black;
 }
 
 .nav
@@ -481,10 +519,7 @@ button{
 	outline:none;
 }
 
-button:hover,
-button:active {
-	background-color: #AD3F36; 
-}
+
 /*end of sign up section*/
 
 /*footer section*/
@@ -571,6 +606,10 @@ button:active {
 
 /* Breakpoints:tablet*/
 @media screen and (min-width: 600px) {
+
+.product_images {
+	width: 50%;
+}
 
 .footer-container {
 	flex-direction: row;
@@ -706,7 +745,6 @@ h2 {
 .product_images {
 	height: 28rem;
 	padding: 2.3rem;
-	width: 50%;
 }
 
 .product_images img{
@@ -744,7 +782,7 @@ input{
 	height: 3rem;
 }
 
-button{
+button[type="submit"]{
 	position: relative;
 	left: 10.2rem;
 	bottom: 2.64rem;
@@ -794,6 +832,9 @@ button{
 }
 
 @media screen and (min-width: 1240px) {
+	.product_images {
+		width: 25%;
+	}
 	.logo {
 		width: 8.8rem;
 		max-width: 160px;
